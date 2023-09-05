@@ -32,7 +32,9 @@ function Header({ userAuthenticated, user }) {
 
       <div className="account-options">
         <div className="account">
-          <span>Hello, {userAuthenticated ? user.username : "guest"}</span>
+          <span>
+            Hello, {userAuthenticated && user ? user.username : "guest"}
+          </span>
           <a href="/signup">Sign In</a>
         </div>
         <div className="orders">
