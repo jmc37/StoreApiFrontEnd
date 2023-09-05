@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/header.css";
-function Header() {
+function Header({ userAuthenticated, user }) {
+  console.log("Header for user authentication", userAuthenticated);
+  console.log("User", user);
   return (
     <nav className="amazon-navbar">
       {/* Amazon Logo */}
@@ -27,9 +29,10 @@ function Header() {
       </div>
 
       {/* Account Options */}
+
       <div className="account-options">
         <div className="account">
-          <span>Hello, User</span>
+          <span>Hello, {userAuthenticated ? user.username : "guest"}</span>
           <a href="/signup">Sign In</a>
         </div>
         <div className="orders">
