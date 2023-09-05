@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 import SignUp from "./pages/SignUp";
 import Cart from "./pages/Cart";
-
+import Sell from "./pages/Sell"
 function App() {
   const [userAuthenticated, setUserAuthenticated] = useState(false); // Initialize as false for unauthenticated
   const [user, setUser] = useState(null);
@@ -34,7 +34,9 @@ function App() {
           path="/cart"
           element={<Cart userAuthenticated={userAuthenticated} user={user} />}
         />
-      </Routes>
+      <Route exact path="/sell"
+        element={<Sell userAuthenticated={userAuthenticated} user={user}/>}/>
+              </Routes>
     </Router>
   );
 }

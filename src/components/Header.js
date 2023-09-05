@@ -25,7 +25,7 @@ function Header({ userAuthenticated, user }) {
         <a href="#">Today's Deals</a>
         <a href="#">Customer Service</a>
         <a href="#">Gift Cards</a>
-        <a href="#">Sell</a>
+        <a href="/sell">Sell</a>
       </div>
 
       {/* Account Options */}
