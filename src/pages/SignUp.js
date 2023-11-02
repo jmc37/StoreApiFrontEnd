@@ -11,7 +11,6 @@ function SignUp({
   return (
     <>
       <Header userAuthenticated={userAuthenticated} user={user} />;
-      <SignUpForm />
       <SignInForm
         setUserAuthenticated={setUserAuthenticated}
         handleSetUser={handleSetUser}

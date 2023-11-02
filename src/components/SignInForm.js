@@ -43,7 +43,7 @@ function SignInForm({ setUserAuthenticated, handleSetUser, user }) {
 
   return (
     <form className="signup-form" onSubmit={handleFormSubmission}>
-      <h1>Signup today in a few steps</h1>
+      <h1>Sign In</h1>
       <label>✍Name</label>
       <input
         type="text"
