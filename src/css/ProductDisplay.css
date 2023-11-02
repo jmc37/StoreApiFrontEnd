@@ -1,0 +1,17 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    200px
+  ); /* Adjust the size (200px) as needed */
+  gap: 16px; /* Adjust the gap between items as needed */
+  justify-content: center; /* Center items horizontally within each grid cell */
+  align-items: center; /* Center items vertically within each grid cell */
+}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import StoreItem from "./StoreItem";
+import "../css/ProductDisplay.css"
 function ProductDisplay() {
   const [items, setItems] = useState([]);
 
@@ -29,10 +30,12 @@ function ProductDisplay() {
       <h1>Items</h1>
       <button onClick={getItems}>Get Items</button>
       {/* Render the items */}
-      <div className="store-items">
-        {items.map((item, index, price) => (
-          <StoreItem key={index} name={item.name} price={item.price} />
+      <div className="page-container">
+      <div className="store-grid">
+        {items.map((item) => (
+          <StoreItem key={item.id} name={item.name} price={item.price} />
         ))}
+      </div>
       </div>
     </div>
   );
