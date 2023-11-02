@@ -1,7 +1,10 @@
 .store-item {
   max-width: 200px; /* Adjust the maximum width as needed */
+  max-height: 200px;
+  width: 100%;
   margin: 0 auto; /* Center the container horizontally */
   padding: 20px; /* Add some padding around the items */
   border: 1px solid #ccc; /* Optional: Add a border around the container */
+  background-color: antiquewhite;
   border-radius: 8px; /* Optional: Add rounded corners to the container */
 }
