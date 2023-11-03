@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
-import Purchase from "../components/Purchase"
+import CheckOutForm from "../components/CheckOutForm";
 function Cart() {
   return (
     <>
       <Header />
-      <Purchase/>
+      <CheckOutForm/>
     </>
   );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/ItemDisplay.css";
 
 function ItemDisplay({ id, name, price }) {
   return (

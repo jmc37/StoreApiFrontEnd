@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemDisplay from "./ItemDisplay";
 import axios from "axios";
 
-function Purchase() {
+function OrderReview({onNext}) {
   const source = "https://store-api-flask-python-project.onrender.com/item/";
   const [cart, setCart] = useState([]);
 
@@ -48,9 +48,10 @@ function Purchase() {
           <ItemDisplay id={item.id} name={item.name} price={item.price}/>
         ))}
         <div>Total: ${getTotal()}</div>
+        <button onClick={onNext}>Next</button>
       </div>
     </>
   );
 }
 
-export default Purchase;
+export default OrderReview;
