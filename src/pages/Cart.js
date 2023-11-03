@@ -1,9 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
+import Purchase from "../components/Purchase"
 function Cart() {
   return (
     <>
-      <Header />;<h1>Cart page</h1>;
+      <Header />
+      <Purchase/>
     </>
   );
 }

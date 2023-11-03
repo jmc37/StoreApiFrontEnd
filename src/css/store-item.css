@@ -2,6 +2,7 @@
   max-width: 200px; /* Adjust the maximum width as needed */
   max-height: 200px;
   width: 100%;
+  cursor: crosshair;
   margin: 0 auto; /* Center the container horizontally */
   padding: 20px; /* Add some padding around the items */
   border: 1px solid #ccc; /* Optional: Add a border around the container */
