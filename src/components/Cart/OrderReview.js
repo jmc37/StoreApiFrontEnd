@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ItemDisplay from "./ItemDisplay";
+import ItemDisplayPurchase from "../Cart/StoreItemPurchase"
 import axios from "axios";
 
 function OrderReview({onNext}) {
+  // localStorage.clear()
   const source = "https://store-api-flask-python-project.onrender.com/item/";
   const [cart, setCart] = useState([]);
 
@@ -14,8 +15,9 @@ function OrderReview({onNext}) {
   async function getItems() {
     let cartItems = [];
     let items = JSON.parse(localStorage.getItem('cart')) || [];
-
+    console.log("Items",items);
     for (let i = 0; i < items.length; i++) {
+      console.log(source + items[i]["id"]);
       try {
         const response = await axios.get(source + items[i]["id"]);
 
@@ -45,7 +47,7 @@ function OrderReview({onNext}) {
       <h1>Cart page</h1>
       <div>
         {cart.map(item => (
-          <ItemDisplay id={item.id} name={item.name} price={item.price}/>
+          <ItemDisplayPurchase id={item.id} image={item.image} name={item.name} price={item.price}/>
         ))}
         <div>Total: ${getTotal()}</div>
         <button onClick={onNext}>Next</button>

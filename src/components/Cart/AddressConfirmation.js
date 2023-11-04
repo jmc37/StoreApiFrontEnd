@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/checkout.css"
+import "../../css/checkout.css"
 function AddressConfirmation({ onNext, onPrev }) {
   return (
     <div className="checkout-step">

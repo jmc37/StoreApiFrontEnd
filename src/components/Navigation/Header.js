@@ -1,18 +1,13 @@
 import React from "react";
-import "../css/header.css";
+import "../../css/header.css"
 function Header() {
   // localStorage.clear()
   const user = JSON.parse(localStorage.getItem("user"))
   return (
     <nav className="amazon-navbar">
       {/* Amazon Logo */}
-      <a href="/">
-        <img
-          href="/"
-          className="amazon-logo"
-          src="https://via.placeholder.com/150x40"
-          alt="Amazon Logo"
-        />
+      <a href="/" className="logo">
+        <h3>Shop Now</h3>
       </a>
       {/* Search Bar */}
       <div className="search-bar">

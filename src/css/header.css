@@ -16,9 +16,12 @@ html {
 }
 
 /* Amazon logo */
-.amazon-logo {
-  max-width: 150px;
-  height: auto;
+.logo {
+  color: white;
+  font: bold;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Search bar container */
@@ -52,6 +55,7 @@ html {
   color: #fff;
   text-decoration: none;
   margin: 0 10px;
+  font-size: 18px;
 }
 
 /* Account options container */
@@ -66,6 +70,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  font-size: 18px;
 }
 
 .account a {
@@ -73,6 +78,7 @@ html {
   text-decoration: none;
   font-weight: bold;
   margin-top: 5px;
+  font-size: 18px;
 }
 
 /* Orders */
@@ -80,6 +86,7 @@ html {
   color: #fff;
   text-decoration: none;
   margin-right: 20px;
+  font-size: 18px;
 }
 
 /* Cart */

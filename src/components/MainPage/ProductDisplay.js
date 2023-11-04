@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StoreItem from "./StoreItem";
-import "../css/ProductDisplay.css";
+import "../../css/ProductDisplay.css";
+import "../../css/ItemDisplay.css";
 
 function ProductDisplay() {
   const source = "https://store-api-flask-python-project.onrender.com/item";

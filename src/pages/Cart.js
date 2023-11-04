@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/Header";
-import CheckOutForm from "../components/CheckOutForm";
+import Header from "../components/Navigation/Header";
+import CheckOutForm from "../components/Cart/CheckOutForm";
 function Cart() {
   return (
     <>
