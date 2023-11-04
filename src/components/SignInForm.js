@@ -3,12 +3,10 @@ import "../css/SignUpForm.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function SignInForm({ setUserAuthenticated, handleSetUser, user }) {
+function SignInForm() {
   const navigate = useNavigate();
-
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  useEffect(() => {}, [user]);
   async function handleFormSubmission(e) {
     e.preventDefault();
     try {
@@ -28,12 +26,12 @@ function SignInForm({ setUserAuthenticated, handleSetUser, user }) {
 
       // Check if the response indicates success (you might need to adjust this condition based on your API's response structure)
       if (response.status === 200) {
-        setUserAuthenticated(true);
-        handleSetUser(data);
-        console.log("User logged in as", user);
+        console.log(response)
+        localStorage.setItem("user", JSON.stringify(userName))
+        localStorage.setItem("token", JSON.stringify(response.data.access_token))
 
         // // Redirect to the home page
-        // navigate("/");
+        navigate("/");
       }
     } catch (error) {
       // Handle errors (e.g., show error message)
@@ -57,7 +55,7 @@ function SignInForm({ setUserAuthenticated, handleSetUser, user }) {
         value={userPassword}
         onChange={(e) => setUserPassword(e.target.value)}
       />
-      <button>🤘Sign Up</button>
+      <button>🤘Sign In</button>
     </form>
   );
 }

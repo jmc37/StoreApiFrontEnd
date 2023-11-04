@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import StoreItem from "./StoreItem";
 import "../css/ProductDisplay.css"
 function ProductDisplay() {
-  localStorage.clear();
   const source = "https://store-api-flask-python-project.onrender.com/item"
   const [items, setItems] = useState([]);
   const [cart, setCart] = useState(() => {

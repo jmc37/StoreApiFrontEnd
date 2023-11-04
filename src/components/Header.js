@@ -1,8 +1,8 @@
 import React from "react";
 import "../css/header.css";
-function Header({ userAuthenticated, user }) {
-  console.log("Header for user authentication", userAuthenticated);
-  console.log("User", user);
+function Header() {
+  // localStorage.clear()
+  const user = JSON.parse(localStorage.getItem("user"))
   return (
     <nav className="amazon-navbar">
       {/* Amazon Logo */}
@@ -32,10 +32,11 @@ function Header({ userAuthenticated, user }) {
 
       <div className="account-options">
         <div className="account">
-          <span>
-            Hello, {userAuthenticated && user ? user.username : "guest"}
-          </span>
-          <a href="/signup">Sign In</a>
+        {user ? (
+      <span>Hello, {user}</span>
+    ) : (
+      <a href="/signup">Sign In</a>
+    )}
         </div>
         <div className="orders">
           <a href="#">Orders</a>
