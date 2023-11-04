@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import StoreItem from "./StoreItem";
 import "../css/ProductDisplay.css"
 function ProductDisplay() {
-  // localStorage.clear();
+  localStorage.clear();
   const source = "https://store-api-flask-python-project.onrender.com/item"
   const [items, setItems] = useState([]);
   const [cart, setCart] = useState(() => {
@@ -50,7 +50,7 @@ function ProductDisplay() {
       <div className="page-container">
       <div className="store-grid">
         {items.map((item) => (
-          <StoreItem id={item.id} name={item.name} price={item.price} addToCart={addToCart}/>
+          <StoreItem id={item.id} name={item.name} price={item.price} description={item.description} image={item.image} addToCart={addToCart}/>
         ))}
       </div>
       </div>

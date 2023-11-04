@@ -9,3 +9,8 @@
   background-color: antiquewhite;
   border-radius: 8px; /* Optional: Add rounded corners to the container */
 }
+.product-image {
+  max-width: 100%; /* Set the maximum width to 100% of the container */
+  max-height: 100%; /* Set the maximum height to 100% of the container */
+  object-fit: cover; /* This property ensures the image covers the entire container without stretching */
+}
