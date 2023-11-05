@@ -1,19 +1,29 @@
 .store-purchase-item {
-  max-width: 600px; /* Adjust the maximum width as needed */
-  max-height: 100px;
-  width: 100%;
-  cursor: pointer;
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add some padding around the items */
-  transition: background-color 0.3s ease;
-  /* border: 1px solid #ccc; Optional: Add a border around the container */
-  border-radius: 8px; /* Optional: Add rounded corners to the container */
+  display: grid;
+  grid-template-columns: 100px 1fr; /* Creates two columns of equal width */
+  grid-template-rows: 100px auto; /* Creates two rows, with the second row auto-sized */
+  max-width: 30%; /* Adjust the maximum width as needed */
+  padding: 10px;
+  margin: 10px; /* Add margin to create space between items */
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
-.store-purchase-item:hover {
-  background-color: #2980b9;
+
+.product-name {
+  grid-column: 2; /* Places item in the first column */
+  grid-row: 1; /* Places item in the second row */
 }
 .product-image-purchase {
-  max-width: 20%; /* Set the maximum width to 100% of the container */
-  max-height: 20%; /* Set the maximum height to 100% of the container */
-  object-fit: cover; /* This property ensures the image covers the entire container without stretching */
+  grid-column: 1; /* Spans two columns */
+  grid-row: 1; /* Places item in the first row */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-price {
+  grid-column: 2; /* Places item in the second column */
+  grid-row: 2; /* Places item in the second row */
+  font-weight: bold;
+  justify-self: end;
+  margin: 0;
 }

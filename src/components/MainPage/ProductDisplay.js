@@ -44,7 +44,6 @@ function ProductDisplay() {
               id={item.id}
               name={item.name}
               price={item.price}
-              description={item.description}
               image={item.image}
               addToCart={addToCart}
             />
