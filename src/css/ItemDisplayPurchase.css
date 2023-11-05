@@ -1,8 +1,8 @@
 .store-purchase-item {
   display: grid;
-  grid-template-columns: 100px 1fr; /* Creates two columns of equal width */
+  grid-template-columns: 150px 1fr; /* Creates two columns of equal width */
   grid-template-rows: 100px auto; /* Creates two rows, with the second row auto-sized */
-  max-width: 30%; /* Adjust the maximum width as needed */
+  max-width: 80%; /* Adjust the maximum width as needed */
   padding: 10px;
   margin: 10px; /* Add margin to create space between items */
   border: 1px solid #ccc;
@@ -26,4 +26,26 @@
   font-weight: bold;
   justify-self: end;
   margin: 0;
+}
+.checkout-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+.total {
+  font-weight: bold;
+  position: absolute;
+  bottom: 60px; /* Adjusted bottom value to create space for the button */
+  right: 20px;
+}
+
+.next-button {
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 20px; /* Positioned beneath the Total text */
+  right: 20px;
 }

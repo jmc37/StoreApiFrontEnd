@@ -44,13 +44,15 @@ function OrderReview({onNext}) {
   }
   return (
     <>
+    <div>
+      <div className="checkout-container">
       <h1>Cart page</h1>
-      <div>
         {cart.map(item => (
           <ItemDisplayPurchase id={item.id} image={item.image} name={item.name} price={item.price}/>
         ))}
-        <div>Total: ${getTotal()}</div>
-        <button onClick={onNext}>Next</button>
+        <div className="total">Total: ${getTotal()}</div>
+        <button  className="next-button" onClick={onNext}>Next</button>
+      </div>
       </div>
     </>
   );
