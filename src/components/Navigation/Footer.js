@@ -4,8 +4,7 @@ import "../../css/Navigation/Footer.css";
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <div className="footer-links">
-        <div className="footer-section">
+        <div className="footer-info">
           <h4>Get to Know Us</h4>
           <ul>
             <li>About Us</li>
@@ -13,7 +12,7 @@ const Footer = () => {
             <li>Press Releases</li>
           </ul>
         </div>
-        <div className="footer-section">
+        <div className="footer-contact">
           <h4>Connect with Us</h4>
           <ul>
             <li>Facebook</li>
@@ -21,8 +20,7 @@ const Footer = () => {
             <li>Instagram</li>
           </ul>
         </div>
-      </div>
-      <div className="footer-section">
+      <div className="footer-sales">
         <h4>Make Money with Us</h4>
         <ul>
           <li>Sell on Amazon</li>

@@ -1,5 +1,5 @@
 .store-item {
-  width: 205px;
+  width: 100%;
   cursor: pointer;
   display: flex;
   flex-direction: column; /* or row, depending on your layout */
@@ -7,17 +7,29 @@
   justify-content: center; /* or flex-start/end, as needed */
   text-align: center;
   height: 350px;
+  margin-bottom: 20px;
 }
 .store-item:hover {
   outline: 4px solid #2980b9; /* Add a blue outline on hover */
 }
 .product-image {
-  width: 200px; /* Set a specific width */
-  height: 200px; /* Set a specific height */
+  width: 100%; /* Take up full width */
+  max-width: 200px; /* Set maximum width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .item-name {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px; /* Adjust font size */
   align-self: flex-start;
+}
+/* Styles for Mobile Screens */
+@media (max-width: 768px) {
+  .store-item {
+    height: auto; /* Allow items to grow in height as needed */
+  }
+
+  .item-name {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
 }
