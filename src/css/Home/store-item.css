@@ -1,19 +1,23 @@
 .store-item {
-  max-width: 200px; /* Adjust the maximum width as needed */
-  max-height: 200px;
-  width: 100%;
+  width: 205px;
   cursor: pointer;
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add some padding around the items */
-  transition: background-color 0.3s ease;
-  /* border: 1px solid #ccc; Optional: Add a border around the container */
-  border-radius: 8px; /* Optional: Add rounded corners to the container */
+  display: flex;
+  flex-direction: column; /* or row, depending on your layout */
+  align-items: center; /* or flex-start/end, as needed */
+  justify-content: center; /* or flex-start/end, as needed */
+  text-align: center;
+  height: 350px;
 }
 .store-item:hover {
-  background-color: #2980b9;
+  outline: 4px solid #2980b9; /* Add a blue outline on hover */
 }
 .product-image {
-  max-width: 100%; /* Set the maximum width to 100% of the container */
-  max-height: 100%; /* Set the maximum height to 100% of the container */
-  object-fit: cover; /* This property ensures the image covers the entire container without stretching */
+  width: 200px; /* Set a specific width */
+  height: 200px; /* Set a specific height */
+}
+
+.item-name {
+  font-weight: bold;
+  font-size: 30px;
+  align-self: flex-start;
 }

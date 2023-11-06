@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StoreItem from "./StoreItem";
-import "../../css/Home/HomeProductDisplay.css";
+import "../../css/Home/home-product-display.css";
 
 function ProductDisplay() {
   const source = "https://store-api-flask-python-project.onrender.com/item";
@@ -34,7 +34,6 @@ function ProductDisplay() {
   }, [cart]);
 
   return (
-    <div>
       <div className="page-container">
         <div className="store-grid">
           {items.map((item) => (
@@ -49,7 +48,6 @@ function ProductDisplay() {
           ))}
         </div>
       </div>
-    </div>
   );
 }
 

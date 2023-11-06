@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Payment({ formData, setFormData, onNext, onPrev }) {
   const handleChange = (e) => {
@@ -9,14 +9,14 @@ function Payment({ formData, setFormData, onNext, onPrev }) {
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
 
-    // Validate payment details (e.g., check if all fields are filled)
-    // This step is important for security.
+  //   // Validate payment details (e.g., check if all fields are filled)
+  //   // This step is important for security.
 
-    // You can now access payment details in formData and send it to your backend for processing.
-  };
+  //   // You can now access payment details in formData and send it to your backend for processing.
+  // };
 
   return (
     <div className="checkout-step">

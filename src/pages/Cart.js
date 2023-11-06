@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Header from "../components/Navigation/Header";
-import Footer from "../components/Navigation/Footer";
 
 import CheckOutForm from "../components/Cart/CheckOutForm";
 import { useNavigate } from "react-router-dom";

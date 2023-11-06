@@ -17,9 +17,9 @@ function Header() {
 
       {/* Navigation Links */}
       <div className="nav-links">
-        <a href="#">Today's Deals</a>
-        <a href="#">Customer Service</a>
-        <a href="#">Gift Cards</a>
+        <a href="/">Today's Deals</a>
+        <a href="/">Customer Service</a>
+        <a href="/">Gift Cards</a>
         <a href="/sell">Sell</a>
       </div>
 
@@ -30,7 +30,7 @@ function Header() {
           {user ? <span>Hello, {user}</span> : <a href="/signup">Sign In</a>}
         </div>
         <div className="orders">
-          <a href="#">Orders</a>
+          <a href="/">Orders</a>
         </div>
         <div className="cart">
           <a href="/cart">Cart</a>
