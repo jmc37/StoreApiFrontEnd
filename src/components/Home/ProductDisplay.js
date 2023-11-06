@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StoreItem from "./StoreItem";
-import "../../css/ProductDisplay.css";
-import "../../css/ItemDisplay.css";
+import "../../css/Home/HomeProductDisplay.css";
 
 function ProductDisplay() {
   const source = "https://store-api-flask-python-project.onrender.com/item";
   const [items, setItems] = useState([]);
   const [cart, setCart] = useState(() => {
-    return JSON.parse(localStorage.getItem('cart')) || [];
+    return JSON.parse(localStorage.getItem("cart")) || [];
   });
 
   const addToCart = (item) => {
-    setCart(cart => [...cart, item]);
+    setCart((cart) => [...cart, item]);
   };
 
   useEffect(() => {
@@ -31,7 +30,7 @@ function ProductDisplay() {
     getItems(); // Call getItems when the component mounts
 
     // Update local storage whenever cart changes
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   return (

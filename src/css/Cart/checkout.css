@@ -1,4 +1,70 @@
-.store-purchase-item {
+.checkout-step {
+  position: relative; /* Set the positioning context for absolute positioning */
+  max-width: 50%; /* Set maximum width to 50% of the page */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex; /* Use flexbox to control layout */
+  flex-direction: column; /* Arrange items in a column */
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkout-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.prev-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.confirm-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.checkout-button-next {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.total {
+  position: absolute;
+  bottom: 50px; /* Adjust as needed */
+  right: 0;
+}
+
+/* Display Items */
+.cart-item {
   display: grid;
   grid-template-columns: 150px 1fr 1fr; /* Creates two columns of equal width */
   grid-template-rows: 100px auto; /* Creates two rows, with the second row auto-sized */
@@ -9,25 +75,25 @@
   border-radius: 8px;
 }
 
-.product-name {
+.item-name {
   grid-column: 2; /* Places item in the first column */
   grid-row: 1; /* Places item in the second row */
 }
-.product-image-purchase {
+.item-image {
   grid-column: 1; /* Spans two columns */
   grid-row: 1; /* Places item in the first row */
   max-width: 100%;
   max-height: 100%;
 }
 
-.product-price {
+.item-price {
   grid-column: 3; /* Places item in the second column */
   grid-row: 2; /* Places item in the second row */
   font-weight: bold;
   justify-self: end;
   margin: 0;
 }
-.checkout-container {
+.item-review-container {
   max-width: 1200px;
   margin: 20px auto;
   border: 1px solid #ccc;
@@ -49,10 +115,11 @@
   bottom: 20px; /* Positioned beneath the Total text */
   right: 20px;
 }
-.red-x {
+.remove-button {
   color: red;
   font-size: 24px;
   font-weight: bold;
+  justify-self: end;
   background-color: white;
   border: none;
   width: 40px;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../css/SignUpForm.css";
+import "../../css/Authentication/SignUpForm.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -26,9 +26,12 @@ function SignInForm() {
 
       // Check if the response indicates success (you might need to adjust this condition based on your API's response structure)
       if (response.status === 200) {
-        console.log(response)
-        localStorage.setItem("user", JSON.stringify(userName))
-        localStorage.setItem("token", JSON.stringify(response.data.access_token))
+        console.log(response);
+        localStorage.setItem("user", JSON.stringify(userName));
+        localStorage.setItem(
+          "token",
+          JSON.stringify(response.data.access_token)
+        );
 
         // // Redirect to the home page
         navigate("/");

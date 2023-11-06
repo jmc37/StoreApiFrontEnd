@@ -1,8 +1,8 @@
 import React from "react";
-import "../../css/header.css"
+import "../../css/Navigation/header.css";
 function Header() {
   // localStorage.clear()
-  const user = JSON.parse(localStorage.getItem("user"))
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <nav className="amazon-navbar">
       {/* Amazon Logo */}
@@ -27,11 +27,7 @@ function Header() {
 
       <div className="account-options">
         <div className="account">
-        {user ? (
-      <span>Hello, {user}</span>
-    ) : (
-      <a href="/signup">Sign In</a>
-    )}
+          {user ? <span>Hello, {user}</span> : <a href="/signup">Sign In</a>}
         </div>
         <div className="orders">
           <a href="#">Orders</a>

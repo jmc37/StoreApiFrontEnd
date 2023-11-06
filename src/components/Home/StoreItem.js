@@ -1,8 +1,8 @@
 import React from "react";
-import "../../css/store-item.css";
+import "../../css/Home/store-item.css";
 function StoreItem({ name, id, price, description, image, addToCart }) {
   function handleClick() {
-    console.log("Passing id to add to cart", id)
+    console.log("Passing id to add to cart", id);
     addToCart({ id });
   }
   return (

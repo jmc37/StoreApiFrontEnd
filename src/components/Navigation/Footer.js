@@ -1,5 +1,5 @@
-import React from 'react';
-import "../../css/Footer.css"
+import React from "react";
+import "../../css/Navigation/Footer.css";
 
 const Footer = () => {
   return (
@@ -32,6 +32,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

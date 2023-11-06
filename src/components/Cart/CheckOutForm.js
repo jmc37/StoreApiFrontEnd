@@ -3,6 +3,7 @@ import OrderReview from "./OrderReview";
 import AddressConfirmation from "./AddressConfirmation";
 import Payment from "./Payment";
 import OrderConfirmation from "./OrderConfirmation.js";
+import "../../css/Cart/checkout.css";
 
 function CheckoutForm() {
   const [step, setStep] = useState(1);

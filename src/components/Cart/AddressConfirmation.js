@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../css/checkout.css";
 import countries from "./countries.json"; // Import the list of countries
 
 function AddressConfirmation({ onNext, onPrev, formData, setFormData }) {

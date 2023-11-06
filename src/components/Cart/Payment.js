@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../css/checkout.css";
 
 function Payment({ formData, setFormData, onNext, onPrev }) {
   const handleChange = (e) => {

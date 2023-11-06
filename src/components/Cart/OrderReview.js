@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemDisplayPurchase from "../Cart/StoreItemPurchase";
+import ItemDisplayPurchase from "../Cart/CartItem";
 import axios from "axios";
 
 function OrderReview({ onNext }) {
@@ -52,7 +52,7 @@ function OrderReview({ onNext }) {
   return (
     <>
       <div>
-        <div className="checkout-container">
+        <div className="item-review-container">
           <h1>Cart page</h1>
           {cart.map((item) => (
             <ItemDisplayPurchase
