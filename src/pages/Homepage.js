@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Navigation/Header";
-import ProductDisplay from "../components/MainPage/ProductDisplay";
-import Footer from "../components/Navigation/Footer"
+import ProductDisplay from "../components/Home/ProductDisplay";
+import Footer from "../components/Navigation/Footer";
 function HomePage({ userAuthenticated, user }) {
   return (
     <div>
