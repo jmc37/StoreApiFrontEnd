@@ -1,0 +1,39 @@
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 3;
+  width: 80%;
+}
+
+.title {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 50px;
+}
+.item-image {
+  grid-column: 1;
+  grid-row: 2;
+  height: 200px;
+  width: 200px;
+}
+.item-name {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.item-description {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+}
+.add-button {
+  grid-column: 2;
+  grid-row: 3;
+  width: 50%;
+  height: 50px;
+}
