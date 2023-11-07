@@ -2,16 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StoreItem from "./StoreItem";
 import "../../css/Home/home-product-display.css";
+import { useNavigate } from "react-router-dom";
 
-function ProductDisplay() {
+
+function HomeProductDisplay() {
+  const navigate = useNavigate();
   const source = "https://store-api-flask-python-project.onrender.com/item";
   const [items, setItems] = useState([]);
-  const [cart, setCart] = useState(() => {
-    return JSON.parse(localStorage.getItem("cart")) || [];
-  });
 
-  const addToCart = (item) => {
-    setCart((cart) => [...cart, item]);
+  const productDetail = (itemId) => {
+    console.log(itemId.id)
+    navigate(`/product/${itemId.id}`);
   };
 
   useEffect(() => {
@@ -28,10 +29,7 @@ function ProductDisplay() {
     }
 
     getItems(); // Call getItems when the component mounts
-
-    // Update local storage whenever cart changes
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+  });
 
   return (
       <div className="page-container">
@@ -43,7 +41,7 @@ function ProductDisplay() {
               name={item.name}
               price={item.price}
               image={item.image}
-              addToCart={addToCart}
+              productDetail={productDetail}
             />
           ))}
         </div>
@@ -51,4 +49,4 @@ function ProductDisplay() {
   );
 }
 
-export default ProductDisplay;
+export default HomeProductDisplay;

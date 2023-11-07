@@ -1,9 +1,9 @@
 import React from "react";
 import "../../css/Home/store-item.css";
-function StoreItem({ name, id, price, description, image, addToCart }) {
+function StoreItem({ name, id, price, description, image, productDetail }) {
   function handleClick() {
     console.log("Passing id to add to cart", id);
-    addToCart({ id });
+    productDetail({ id });
   }
   return (
     <div className="store-item" id={id} onClick={() => handleClick(id)}>

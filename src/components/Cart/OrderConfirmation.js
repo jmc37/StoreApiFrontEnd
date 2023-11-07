@@ -5,20 +5,23 @@ import axios from "axios";
 function OrderConfirmation({ onPrev }) {
   const source = "https://store-api-flask-python-project.onrender.com/item/";
   const [cart, setCart] = useState([]);
-
   useEffect(() => {
     // Populate cart on page load
     getItems();
-  }, []);
-  async function getItems() {
+  },[]);
+
+async function getItems() {
     let cartItems = [];
-    let items = JSON.parse(localStorage.getItem("cart")) || [];
-    for (let i = 0; i < items.length; i++) {
+    let items = JSON.parse(localStorage.getItem("cart")) || {};
+    for (let key in items) {
       try {
-        const response = await axios.get(source + items[i]["id"]);
+        const response = await axios.get(source + key);
 
         if (response.status === 200) {
-          cartItems[i] = response.data;
+          const quantity = items[key]; 
+          const itemWithQuantity = { ...response.data, quantity };
+          cartItems.push(itemWithQuantity);
+ 
         }
       } catch (error) {
         console.error("API Error:", error);
@@ -31,8 +34,10 @@ function OrderConfirmation({ onPrev }) {
   function getTotal() {
     let total = 0;
     for (let j = 0; j < cart.length; j++) {
-      total += cart[j]["price"];
+      total += cart[j]["price"] * cart[j]["quantity"];
     }
+    total = (Math.round(total * 100) / 100).toFixed(2);
+
     return total;
   }
   return (
@@ -44,6 +49,7 @@ function OrderConfirmation({ onPrev }) {
           image={item.image}
           name={item.name}
           price={item.price}
+          quantity={item.quantity}
         />
       ))}
       <div className="total">Total: ${getTotal()}</div>

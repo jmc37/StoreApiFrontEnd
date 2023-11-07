@@ -93,6 +93,13 @@ button:hover {
   justify-self: end;
   margin: 0;
 }
+.item-quantity {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  display: flex;
+  align-items: center;
+}
 .item-review-container {
   max-width: 1200px;
   margin: 20px auto;
@@ -101,7 +108,12 @@ button:hover {
   padding: 20px;
   position: relative;
 }
-
+.quantity-button {
+  cursor: pointer;
+  padding: 5px 10px; /* Adjust padding as needed */
+  margin: 0 5px; /* Add some space between buttons */
+  font-weight: bold;
+}
 .total {
   font-weight: bold;
   position: absolute;

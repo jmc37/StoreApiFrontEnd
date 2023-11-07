@@ -23,9 +23,9 @@ const Footer = () => {
       <div className="footer-sales">
         <h4>Make Money with Us</h4>
         <ul>
-          <li>Sell on Amazon</li>
-          <li>Sell under Amazon Accelerator</li>
-          <li>Become an Affiliate</li>
+          <li>Sell on Shop Now</li>
+          <li>Become a Partner</li>
+          <li>Invest in the company</li>
         </ul>
       </div>
     </footer>
