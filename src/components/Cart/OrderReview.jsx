@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CartItem from "../Cart/CartItem";
+import CartItem from "./CartItem";
 import axios from "axios";
 
 function OrderReview({ onNext }) {
@@ -9,7 +9,7 @@ function OrderReview({ onNext }) {
   useEffect(() => {
     // Populate cart on page load
     getItems();
-  },[]);
+  }, []);
 
   async function getItems() {
     let cartItems = [];
@@ -19,10 +19,9 @@ function OrderReview({ onNext }) {
         const response = await axios.get(source + key);
 
         if (response.status === 200) {
-          const quantity = items[key]; 
+          const quantity = items[key];
           const itemWithQuantity = { ...response.data, quantity };
           cartItems.push(itemWithQuantity);
- 
         }
       } catch (error) {
         console.error("API Error:", error);
@@ -43,24 +42,24 @@ function OrderReview({ onNext }) {
     return total;
   }
 
-  function subtractQuantity(id){
+  function subtractQuantity(id) {
     let items = JSON.parse(localStorage.getItem("cart"));
     items[id] -= 1;
-    if (items[id] === 0){
-        removeItem(id)
-        return
+    if (items[id] === 0) {
+      removeItem(id);
+      return;
     }
     localStorage.setItem("cart", JSON.stringify(items));
     getItems();
   }
 
-  function addQuantity(id){
+  function addQuantity(id) {
     let items = JSON.parse(localStorage.getItem("cart"));
     items[id] += 1;
     localStorage.setItem("cart", JSON.stringify(items));
     getItems();
   }
-  
+
   //Remove an item from the cart
   function removeItem(id) {
     let items = JSON.parse(localStorage.getItem("cart"));
@@ -75,11 +74,11 @@ function OrderReview({ onNext }) {
           <h1>Cart page</h1>
           {cart.map((item) => (
             <CartItem
-              key={item.id} 
+              key={item.id}
               id={item.id}
               image={item.image}
               name={item.name}
-              quantity={item.quantity} 
+              quantity={item.quantity}
               price={item.price}
               removeItem={removeItem}
               subtractQuantity={subtractQuantity}
@@ -87,7 +86,7 @@ function OrderReview({ onNext }) {
             />
           ))}
           <div className="total">Total: ${getTotal()}</div>
-          <button className="next-button" onClick={onNext}>
+          <button className="checkout-button-next" onClick={onNext}>
             Next
           </button>
         </div>

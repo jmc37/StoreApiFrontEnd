@@ -8,9 +8,11 @@
   text-align: center;
   height: 350px;
   margin-bottom: 20px;
+  transition: transform 0.3s; /* Add a transition for smooth animation */
 }
 .store-item:hover {
-  outline: 4px solid #2980b9; /* Add a blue outline on hover */
+  outline: 4px solid #2980b9;
+  transform: scale(1.1); /* Enlarge the item on hover */
 }
 .product-image {
   width: 100%; /* Take up full width */

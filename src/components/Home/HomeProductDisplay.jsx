@@ -4,14 +4,13 @@ import StoreItem from "./StoreItem";
 import "../../css/Home/home-product-display.css";
 import { useNavigate } from "react-router-dom";
 
-
 function HomeProductDisplay() {
   const navigate = useNavigate();
   const source = "https://store-api-flask-python-project.onrender.com/item";
   const [items, setItems] = useState([]);
 
   const productDetail = (itemId) => {
-    console.log(itemId.id)
+    console.log(itemId.id);
     navigate(`/product/${itemId.id}`);
   };
 
@@ -32,20 +31,21 @@ function HomeProductDisplay() {
   });
 
   return (
-      <div className="page-container">
-        <div className="store-grid">
-          {items.map((item) => (
-            <StoreItem
-              key={item.id} // Add a unique key to the StoreItem component
-              id={item.id}
-              name={item.name}
-              price={item.price}
-              image={item.image}
-              productDetail={productDetail}
-            />
-          ))}
-        </div>
+    <div className="page-container">
+      <h1 className="prouducts-title">Featured Products</h1>
+      <div className="store-grid">
+        {items.map((item) => (
+          <StoreItem
+            key={item.id} // Add a unique key to the StoreItem component
+            id={item.id}
+            name={item.name}
+            price={item.price}
+            image={item.image}
+            productDetail={productDetail}
+          />
+        ))}
       </div>
+    </div>
   );
 }
 

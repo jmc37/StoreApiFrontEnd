@@ -36,4 +36,11 @@
   grid-row: 3;
   width: 50%;
   height: 50px;
+  background-color: #007bff;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Change to a lighter color on hover */
 }

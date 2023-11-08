@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import OrderReview from "./OrderReview";
-import AddressConfirmation from "./AddressConfirmation";
-import Payment from "./Payment";
-import OrderConfirmation from "./OrderConfirmation.js";
+import OrderReview from "./OrderReview.jsx";
+import AddressConfirmation from "./AddressConfirmation.jsx";
+import Payment from "./Payment.jsx";
+import OrderConfirmation from "./OrderConfirmation.jsx";
+import OrderComplete from "./OrderComplete.jsx";
 import "../../css/Cart/checkout.css";
 
 function CheckoutForm() {
@@ -49,7 +50,10 @@ function CheckoutForm() {
           onPrev={handlePrev}
         />
       )}
-      {step === 4 && <OrderConfirmation onPrev={handlePrev} />}
+      {step === 4 && (
+        <OrderConfirmation onPrev={handlePrev} onNext={handleNext} />
+      )}
+      {step === 5 && <OrderComplete />}
     </div>
   );
 }

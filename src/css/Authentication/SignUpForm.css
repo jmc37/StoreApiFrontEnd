@@ -12,6 +12,7 @@
   display: flex; /* Add flex display */
   flex-direction: column; /* Make sure children stack vertically */
   align-items: center; /* Center children horizontally */
+  margin-bottom: 250px;
 }
 
 .signup-form h1 {

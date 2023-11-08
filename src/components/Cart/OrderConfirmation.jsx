@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import ItemDisplayPurchase from "./CartItem";
 import axios from "axios";
 
-function OrderConfirmation({ onPrev }) {
+function OrderConfirmation({ onPrev, onNext }) {
   const source = "https://store-api-flask-python-project.onrender.com/item/";
   const [cart, setCart] = useState([]);
   useEffect(() => {
     // Populate cart on page load
     getItems();
-  },[]);
+  }, []);
 
-async function getItems() {
+  async function getItems() {
     let cartItems = [];
     let items = JSON.parse(localStorage.getItem("cart")) || {};
     for (let key in items) {
@@ -18,10 +18,9 @@ async function getItems() {
         const response = await axios.get(source + key);
 
         if (response.status === 200) {
-          const quantity = items[key]; 
+          const quantity = items[key];
           const itemWithQuantity = { ...response.data, quantity };
           cartItems.push(itemWithQuantity);
- 
         }
       } catch (error) {
         console.error("API Error:", error);
@@ -56,7 +55,9 @@ async function getItems() {
       <button className="prev-button" onClick={onPrev}>
         Previous
       </button>
-      <button className="checkout-button confirm-button">Confirm Order</button>
+      <button className="checkout-button confirm-button" onClick={onNext}>
+        Confirm Order
+      </button>
     </div>
   );
 }
