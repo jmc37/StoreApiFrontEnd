@@ -52,12 +52,26 @@ html {
 
 /* Navigation links */
 .nav-links a {
+  position: relative; /* Set position to relative */
   color: #fff;
   text-decoration: none;
   margin: 0 10px;
   font-size: 18px;
 }
+.nav-links a::after {
+  content: ""; /* Add content */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initial width is zero */
+  height: 2px;
+  background-color: #ff9900;
+  transition: width 0.3s ease; /* Transition the width */
+}
 
+.nav-links a:hover::after {
+  width: 100%; /* When hovering, set width to 100% */
+}
 /* Account options container */
 .account-options {
   display: flex;
@@ -83,6 +97,7 @@ html {
 
 /* Orders */
 .orders a {
+  position: relative; /* Set position to relative */
   color: #fff;
   text-decoration: none;
   margin-right: 20px;
@@ -91,8 +106,27 @@ html {
 
 /* Cart */
 .cart a {
+  position: relative; /* Set position to relative */
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
+}
+
+.orders a::after,
+.cart a::after {
+  content: ""; /* Add content */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initial width is zero */
+  height: 2px;
+  background-color: #ff9900;
+  transition: width 0.3s ease; /* Transition the width */
+}
+
+.orders a:hover::after,
+.cart a:hover::after {
+  width: 100%; /* When hovering, set width to 100% */
 }
 @media (max-width: 768px) {
   .amazon-navbar {

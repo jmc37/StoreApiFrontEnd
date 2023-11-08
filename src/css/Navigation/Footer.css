@@ -10,6 +10,14 @@
   width: 100%;
 }
 
+.footer-container li {
+  cursor: pointer;
+  margin: 5px;
+  transition: color 0.2s ease; /* Add transition for color change */
+}
+.footer-container li:hover {
+  color: #888; /* Change to your desired lighter color */
+}
 .footer-info {
   grid-column: 1;
 }
