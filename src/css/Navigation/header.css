@@ -62,7 +62,8 @@ html {
   content: ""; /* Add content */
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, 50%); /* Adjust the positioning */
   width: 0; /* Initial width is zero */
   height: 2px;
   background-color: #ff9900;
@@ -117,7 +118,8 @@ html {
   content: ""; /* Add content */
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, 50%); /* Adjust the positioning */
   width: 0; /* Initial width is zero */
   height: 2px;
   background-color: #ff9900;
